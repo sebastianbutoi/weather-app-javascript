@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>WEATHER APP</h1>
+      <label for="city-input"></label>
+      <input
+        type="text"
+        id="city-input"
+        name="city-input"
+        placeholder="Insert city's name.."
+      />
+      <input
+        type="text"
+        id="country-code"
+        name="country-code"
+        placeholder="Insert country code.. (optional)"
+      />
+      <br /><br />
+      <button id="get-data">Get data</button>
+    </header>
+    <section id="card">
+      <div id="card-upper">
+        <div id="upper-left">
+          <div id="img-container">
+            <img id="logo" src="" alt="weather-picture" />
+          </div>
+          <div id="temp-container">
+            <p id="temp"><span id="temp-span">0</span>°C</p>
+          </div>
+          <div id="main-info">
+            <p id="humidity">Humidity: <span id="humidity-span"></span>%</p>
+            <p id="wind">Wind: <span id="wind-span"></span> m/s</p>
+          </div>
+        </div>
+        <div id="upper-right">
+          <p id="city">
+            <span id="city-span"></span>, <span id="country-span"></span>
+          </p>
+          <p id="date"></p>
+          <p id="weather-main"></p>
+        </div>
+      </div>
+      <div id="card-lower">
+        <div id="lower-left">
+          <p><b>Cloudiness:</b> <span id="cloudiness-span"></span>%</p>
+          <p><b>Min Temp:</b> <span id="min-temp-span"></span>°C</p>
+          <p><b>Max Temp:</b> <span id="max-temp-span"></span>°C</p>
+        </div>
+        <div id="lower-right">
+          <p>
+            <b>Atmospheric Pressure:</b>
+            <span id="atm-pressure-span"></span> hPa
+          </p>
+          <p>
+            <b>Wheater:</b>
+            <span id="weather-description-span"></span>
+          </p>
+          <p><b>Coord:</b> <span id="coord-span"></span></p>
+        </div>
+      </div>
+    </section>
+    <section id="map"></section>
+    <!-- JS scripts -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
